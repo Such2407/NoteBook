@@ -22,7 +22,7 @@
                 <input type="text" placeholder="Subject :" id="subject">
             </div>
             <div class="textarea">
-                <textarea name="textarea" id="textarea" cols="30" rows="41" placeholder="Typing...."></textarea>
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Typing...."></textarea>
             </div> 
             <div class="time">${dayArray[day]}, ${monthArray[months]}, ${years}</div>
             `
