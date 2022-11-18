@@ -19,7 +19,7 @@
         newDiv.classList.add("textarea-box");
         newDiv.innerHTML=`
             <div class="subject">
-                <input type="text" placeholder="Subject :" id="subject">
+                <input type="text" placeholder="Subject : required" id="subject">
             </div>
             <div class="textarea">
                 <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Typing...."></textarea>
