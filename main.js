@@ -65,7 +65,6 @@
             <div class="subject-time">${subjsctTime}</div>
             <div class="deleteIcon"><img src="pictures/icons8-trash-50.png" class="delete-new-div" alt=""></div>
             `
-            dropdownNote.classList.remove("add-dropdown");
             newDivBody.innerHTML = `
             
                 <div class="dropdown-note">
@@ -90,6 +89,10 @@
             `
             notebook.insertBefore(newDiv,noteFooter);
             notebook.insertBefore(newDivBody,noteFooter);
+            let empty =event.target.parentElement.parentElement.parentElement.nextElementSibling;
+            // console.log(empty);
+            empty.remove();
+            dropdownNote.classList.remove("add-dropdown");
            
         }else{
             let empty =event.target.parentElement.parentElement.parentElement.nextElementSibling;
