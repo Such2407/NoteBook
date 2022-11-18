@@ -102,7 +102,7 @@ body{
 }
 .time{
     position: absolute;
-    top: 1%;
+    top: 4%;
     right: 5%;
     color: blue;
 }
@@ -148,7 +148,7 @@ body{
 
 
 @media screen and (max-width:650px) {
-    #textarea, .subject-head, #subject{
+    #textarea,.subject-head,#subject, .subject-time, .time{
         font-size: 15px;
     }
     
