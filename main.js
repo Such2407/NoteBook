@@ -37,10 +37,12 @@
     const remove = document.querySelector(".cancel");
     const noteFooter = document.querySelector(".note-footer");
     remove.addEventListener("click", function(event){
+        
+        let empty =event.target.parentElement.parentElement.parentElement.nextElementSibling;
+        // console.log(empty);
+        empty.remove();
         dropdownNote.classList.remove("add-dropdown");
-        // let empty =event.target.parentElement.parentElement.parentElement.nextElementSibling;
-        // empty.innerHTML=""
-    })
+    });
 
     const save = document.querySelector(".save");
     save.addEventListener("click", function(event){
@@ -54,9 +56,9 @@
         const newDivBody=document.createElement("div");
         newDivBody.classList.add("ben");
         let subjsctTime =event.target.parentElement.parentElement.parentElement.nextElementSibling.children[2].innerHTML;
-        console.log(textValue);
-        console.log(textareaValue);
-        console.log(input);
+        // console.log(textValue);
+        // console.log(textareaValue);
+        // console.log(input);
         if(!subjectValue==""){
             newDiv.innerHTML=`
             <div class="subject-head">${subjectValue}</div>
@@ -87,9 +89,12 @@
             
             `
             notebook.insertBefore(newDiv,noteFooter);
-            notebook.insertBefore(newDivBody,noteFooter)
+            notebook.insertBefore(newDivBody,noteFooter);
            
         }else{
+            let empty =event.target.parentElement.parentElement.parentElement.nextElementSibling;
+            // console.log(empty);
+            empty.remove();
             dropdownNote.classList.remove("add-dropdown");
         }
         // console.log(newDiv.children[2]);
@@ -103,13 +108,13 @@
                 e.target.parentElement.parentElement.lastElementChild.classList.add("add-dropdown");
             }
             
-        })
+        });
         newDivBody.addEventListener("click", function(e){
             let pos = e.target.parentElement.parentElement.parentElement.parentElement;
             if (e.target.classList.contains("cancel")) {
                 pos.classList.remove("add-dropdown");
             }
-        })
+        });
 
     });
 
