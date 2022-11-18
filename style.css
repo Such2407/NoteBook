@@ -148,7 +148,7 @@ body{
 
 
 @media screen and (max-width:650px) {
-    #textarea,.subject-head,#subject, .subject-time, .time{
+    #textarea, .spac >div.textarea, .subject-head,#subject, .subject-time, .time{
         font-size: 15px;
     }
     
